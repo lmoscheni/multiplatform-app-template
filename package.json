@@ -1,0 +1,31 @@
+{
+  "name": "multiplatform-app-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "electronApp.js",
+  "scripts": {
+    "build": "npm --prefix ./client run build",
+    "server": "npm run build && node run.js",
+    "electron": "npm run build && electron .",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": " npm run build && electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leandro Moscheni <leandromoscheni@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.1"
+  },
+  "devDependencies": {
+    "electron": "^12.0.6",
+    "electron-builder": "^22.11.1"
+  },
+  "build": {
+    "appId": "multiplatform-app-template-id",
+    "mac": {
+      "category": "Testing"
+    }
+  }
+}
